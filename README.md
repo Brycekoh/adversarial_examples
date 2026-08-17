@@ -228,8 +228,16 @@ jupyter notebook AdversarialAttacksResearchFinal.ipynb
 
 ```
 adversarial_examples/
-├── AdversarialAttacksResearchFinal.ipynb   # Complete research notebook
-├── README.md                               # This file
+├── AdversarialAttacksResearchFinal.ipynb   # Research notebook (orchestration & narrative)
+├── README.md
+├── requirements.txt
+├── src/                                    # Modular Python package
+│   ├── __init__.py
+│   ├── attacks.py                          # I-FGSM attack implementation
+│   ├── defenses.py                         # All defense strategies (blur, JPEG, quantization, diffusion)
+│   ├── models.py                           # MNISTNet CNN & ResNet50 loader
+│   ├── visualization.py                    # Plotting & figure generation
+│   └── data.py                             # Dataset loading (MNIST, ImageNette)
 └── Generated outputs:
     ├── defense_heatmap.png                 # Defense comparison heatmap
     ├── attack_grid.png                     # I-FGSM attack visualization
